@@ -19,34 +19,34 @@ function generateReadmeText (responseData) {
     let readmeTableOfContents = ''
     let generatedReadmeBody = ''
     if (description != '') {
-        generatedReadmeBody += `\n\n##Description\n${description}`
+        generatedReadmeBody += `\n\n## Description\n${description}`
         readmeTableOfContents += '\n- [Description](#description)'
     }
     if (installInst != '') {
-        generatedReadmeBody += `\n\n##Install\n${installInst}`
+        generatedReadmeBody += `\n\n## Install\n${installInst}`
         readmeTableOfContents += '\n- [Install](#install)'
     }
     if (usageInst != '') {
-        generatedReadmeBody += `\n\n##Usage\n${usageInst}`
+        generatedReadmeBody += `\n\n## Usage\n${usageInst}`
         readmeTableOfContents += '\n- [Usage](#usage)'
     }
     if (contributionGuides != '') {
-        generatedReadmeBody += `\n\n##Contribution\n${contributionGuides}`
+        generatedReadmeBody += `\n\n## Contribution\n${contributionGuides}`
         readmeTableOfContents += '\n- [Contribution](#contribution)'
     }
     if (tests != '') {
-        generatedReadmeBody += `\n\n##Tests\n${tests}`
+        generatedReadmeBody += `\n\n## Tests\n${tests}`
         readmeTableOfContents += '\n- [Tests](#tests)'
     }
     if (projectLicense != '') {
-        generatedReadmeBody += `\n\n##License\n${projectLicense}`
+        generatedReadmeBody += `\n\n## License\n${projectLicense}`
         readmeTableOfContents += '\n- [License](#license)'
     }
     if (projectQuestions != '') {
-        generatedReadmeBody += `\n\n##Questions?\n${projectQuestions}`
+        generatedReadmeBody += `\n\n## Questions?\n${projectQuestions}`
         readmeTableOfContents += '\n- [Questions?](#questions?)'
     }
-    let generatedReadme = `#${title}\n\n##Table of Contents${readmeTableOfContents}` + generatedReadmeBody
+    let generatedReadme = `# ${title}\n\n## Table of Contents${readmeTableOfContents}` + generatedReadmeBody
 
     fs.writeFile('./output/README.md', generatedReadme, err => {
         if (err) {
