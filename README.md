@@ -15,6 +15,7 @@ This CLI requires node.js to be installed.
 
 ## Usage
 To use the program, simply run the index.js file by typing "node index.js" into the command line. Assuming you have node.js installed, and have installed inquirer, the command line will prompt you  with a few questions.  Simply answer these questions, and it will generate a readme file generated from your answers. This readme file will be located in the output folder.
+Video demo: https://drive.google.com/file/d/12j3z-a3gXjXVHkEBy5sw724xR56G0G91/view?usp=drive_link
 
 ## License
 None
