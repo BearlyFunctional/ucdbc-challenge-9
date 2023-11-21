@@ -3,13 +3,13 @@ const fs = require('fs')
 
 inquirer .prompt([
     {name: 'title', message: "What is your project's title?",},
-    {name: 'description', message: "Please enter your project's desription"},
-    {name: 'installInst', message: 'How is your project installed?'},
-    {name: 'usageInst', message: 'How is your project used?'},
-    {name: 'contributionGuides', message: 'Please enter your contribution guidelines:'},
-    {name: 'tests', message: 'Please enter any test instructions for your project:'},
-    {name: 'projectLicense', message: 'What license does your project use?'},
-    {name: 'projectQuestions', message: 'How can users reach you to as questions?'}
+    {name: 'description', message: "Please enter your project's desription (Leave blank to exclude this section)"},
+    {name: 'installInst', message: 'How is your project installed? (Leave blank to exclude this section)'},
+    {name: 'usageInst', message: 'How is your project used? (Leave blank to exclude this section)'},
+    {name: 'contributionGuides', message: 'Please enter your contribution guidelines:  (Leave blank to exclude this section)'},
+    {name: 'tests', message: 'Please enter any test instructions for your project:  (Leave blank to exclude this section)'},
+    {name: 'projectLicense', message: 'What license does your project use?  (Leave blank to exclude this section)'},
+    {name: 'projectQuestions', message: 'How can users reach you to as questions?  (Leave blank to exclude this section)'}
 ]) .then ((response) => {
     generateReadmeText(response)
 })
@@ -52,7 +52,7 @@ function generateReadmeText (responseData) {
         if (err) {
           console.error(err);
         } else {
-            console.log('Readme file created! Location is ./output/README.md')
+            console.log('Readme file created! Check output folder.')
         }
       })
 }
